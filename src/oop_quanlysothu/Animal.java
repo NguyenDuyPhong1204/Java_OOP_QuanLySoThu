@@ -4,18 +4,21 @@
  */
 package oop_quanlysothu;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Admin
  */
 public class Animal {
-        private String tenDongVat;
-        private String gioiTinh;
-        private int kichThuoc;
-        private int canNang;
-        private String mauSac;
-        private String thucAn;
-        private int tuoi;
+
+    private String tenDongVat;
+    private String gioiTinh;
+    private int kichThuoc;
+    private int canNang;
+    private String mauSac;
+    private String thucAn;
+    private int tuoi;
 
     public Animal() {
     }
@@ -75,12 +78,32 @@ public class Animal {
     public void setTuoi(int tuoi) {
         this.tuoi = tuoi;
     }
+
+    public void nhap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhập tên của động vật: ");
+        this.tenDongVat = sc.nextLine();
+        System.out.print("Nhập giới tính của động vật: ");
+        this.gioiTinh = sc.nextLine();
+        System.out.print("Nhập kích thước của động vật: ");
+        this.kichThuoc = sc.nextInt();
+        System.out.print("Nhập cân nặng của động vật: ");
+        this.canNang = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Nhập màu sắc của động vật: ");
+        this.mauSac = sc.nextLine();
+        System.out.print("Nhập thức ăn của động vật: ");
+        this.thucAn = sc.nextLine();
+        System.out.print("Nhập tuổi của động vật: ");
+        this.tuoi = sc.nextInt();
+    }
+
+    ;
     
-    public void nhap(){
-        
-    };
-    
-    public void xuat(){
-        
-    };
+    public void xuat() {
+        System.out.println("Tên động vật: " + this.tenDongVat + "\n" + "Giới tính: " + this.gioiTinh
+                + "\n" + "Kích thức: " + this.kichThuoc + "\n" + "Cân nặng: " + this.canNang + "\n"
+                + "Màu sắc: " + this.mauSac + "\n" + "Thức ăn: " + this.thucAn + "\n" + "Tuổi: " + this.tuoi);
+    }
+;
 }
