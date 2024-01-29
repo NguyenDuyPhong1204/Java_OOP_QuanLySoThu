@@ -12,6 +12,7 @@ import java.util.Scanner;
  */
 public class Animal {
 
+    private String maDongVat;
     private String tenDongVat;
     private String gioiTinh;
     private int kichThuoc;
@@ -21,6 +22,25 @@ public class Animal {
     private int tuoi;
 
     public Animal() {
+    }
+
+    public Animal(String maDongVat, String tenDongVat, String gioiTinh, int kichThuoc, int canNang, String mauSac, String thucAn, int tuoi) {
+        this.maDongVat = maDongVat;
+        this.tenDongVat = tenDongVat;
+        this.gioiTinh = gioiTinh;
+        this.kichThuoc = kichThuoc;
+        this.canNang = canNang;
+        this.mauSac = mauSac;
+        this.thucAn = thucAn;
+        this.tuoi = tuoi;
+    }
+
+    public String getMaDongVat() {
+        return maDongVat;
+    }
+
+    public void setMaDongVat(String maDongVat) {
+        this.maDongVat = maDongVat;
     }
 
     public String getTenDongVat() {
@@ -81,6 +101,8 @@ public class Animal {
 
     public void nhap() {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Nhập mã động vật: ");
+        this.maDongVat = sc.nextLine();
         System.out.print("Nhập tên của động vật: ");
         this.tenDongVat = sc.nextLine();
         System.out.print("Nhập giới tính của động vật: ");
@@ -100,7 +122,7 @@ public class Animal {
     ;
     
     public void xuat() {
-        System.out.println("Tên động vật: " + this.tenDongVat + "\n" + "Giới tính: " + this.gioiTinh
+        System.out.println("Mã động vật: " + this.maDongVat + " \n" + "Tên động vật: " + this.tenDongVat + "\n" + "Giới tính: " + this.gioiTinh
                 + "\n" + "Kích thức: " + this.kichThuoc + "\n" + "Cân nặng: " + this.canNang + "\n"
                 + "Màu sắc: " + this.mauSac + "\n" + "Thức ăn: " + this.thucAn + "\n" + "Tuổi: " + this.tuoi);
     }
