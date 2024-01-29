@@ -88,8 +88,7 @@ public class Animal {
         System.out.print("Nhập kích thước của động vật: ");
         this.kichThuoc = sc.nextInt();
         System.out.print("Nhập cân nặng của động vật: ");
-        this.canNang = sc.nextInt();
-        sc.nextLine();
+        this.canNang = Integer.parseInt(sc.nextLine());
         System.out.print("Nhập màu sắc của động vật: ");
         this.mauSac = sc.nextLine();
         System.out.print("Nhập thức ăn của động vật: ");
